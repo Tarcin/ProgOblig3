@@ -9,5 +9,7 @@ return image;
 }
 function overlayXY(img2, x, y, img1) {
 //img2 is overlaid on top of img1
-img2.appendChild(img1)
+img1.setAttribute("x", x);
+img1.setAttribute("y", y);
+img2.appendChild(img1);
 }
