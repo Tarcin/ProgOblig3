@@ -13,22 +13,10 @@
 		</svg>
 	</div>
 <script>
-/*function circleSVG(radius, fillmode, color){
-var image = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-image.setAttribute("r", radius);
-if(fillmode == "outline"){
-    image.setAttribute("stroke", color);
-} else if(fillmode == "solid") {
-    image.setAttribute("fill", color);
-}
-return image;
-}*/
     const svg = document.getElementById("yiya");
     svg.setAttribute("width", "200");
     svg.setAttribute("height", "200");
-    const c = circleSVG(50, "solid", "black");
-    svg.appendChild(c);
-    //overlayXY(svg, 50, 50, circle(50, "solid", "black"));
+    overlayXYsvg(svg, 50, 50, circleSVG(50, "solid", "black"));
 </script>
 </body>
 
