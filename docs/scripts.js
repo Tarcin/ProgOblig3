@@ -1,13 +1,26 @@
-function circle(radius, fillmode, color){
+function circleSVG(radius, fillmode, color){
 var image = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-image.setAttribute("rx", radius);
-image.setAttribute("ry", radius);
 image.setAttribute("r", radius);
-//circle.setAttribute("stroke", fillmode);
-image.setAttribute("fill", color);
+if(fillmode == "outline"){
+    image.setAttribute("stroke", color);
+} else if(fillmode == "solid") {
+    image.setAttribute("fill", color);
+}
 return image;
 }
-    function overlayXY(img2, x, y, img1) {
+
+function rectangleSVG(width, height, fillmode, color){
+var image = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+image.setAttribute("width", width);
+image.setAttribute("length", length);
+if(fillmode == "outline"){
+    image.setAttribute("stroke", color);
+} else if(fillmode == "solid") {
+    image.setAttribute("fill", color);
+}
+return image;
+}
+    function overlayXYsvg(img2, x, y, img1) {
 //img2 is overlaid on top of img1 at coordinates
 img2.appendChild(img1)
 img1.setAttribute("cx", x);
