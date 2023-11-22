@@ -9,15 +9,25 @@
 </head>
 <body>
 	<div id="main">
-		<svg id="yiya" xmlns="http://www.w3.org/2000/svg">
-		</svg>
+		<!--<svg id="yiya" xmlns="http://www.w3.org/2000/svg">
+		</svg>-->
+        <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;">
+        </canvas> 
 	</div>
 <script>
-    const svg = document.getElementById("yiya");
+    /*const svg = document.getElementById("yiya");
     svg.setAttribute("width", "200");
     svg.setAttribute("height", "200");
     const c = circleSVG(50, "solid", "black");
-    svg.appendChild(c);
+    svg.appendChild(c);*/
+    //var c = circle(150, "solid", "black");
+
+    circle(150, "solid", "black");
+    var canvas = document.getElementById("myCanvas");
+    canvas.style.position = "absolute";
+    canvas.style.left = "100px";
+    canvas.style.top = "100px";
+    //circle(50, "solid", "blue");
 </script>
 </body>
 
