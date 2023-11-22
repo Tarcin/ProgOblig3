@@ -1,3 +1,4 @@
+//SVG FUNCTIONS
 function circleSVG(radius, fillmode, color){
 var image = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 image.setAttribute("r", radius);
@@ -31,4 +32,23 @@ img2.appendChild(img1)
     img1.setAttribute("x", x);
     img1.setAttribute("y", y);
   }
+}
+
+//CANVAS FUNCTIONS
+  function circle(radius, fillmode, color){
+    var canvas = document.getElementById("myCanvas");
+    //canvas.width = radius + 10
+    //canvas.height = radius + 10
+    var ctx = canvas.getContext("2d");
+    var circX = canvas.width / 2;
+    var circY = canvas.height / 2;
+    ctx.beginPath();
+    ctx.arc(circX, circY, radius, 0, 2 * Math.PI);
+    if (fillmode == "solid"){
+        ctx.fillStyle = color;
+        ctx.fill();
+    } else if (fillMode == "outline"){
+        ctx.stroke();
+    }
+    //return canvas
 }
