@@ -37,8 +37,6 @@ img2.appendChild(img1)
 //CANVAS FUNCTIONS
   function circle(radius, fillmode, color){
     var canvas = document.getElementById("myCanvas");
-    //canvas.width = radius + 10
-    //canvas.height = radius + 10
     var ctx = canvas.getContext("2d");
     var circX = canvas.width / 2;
     var circY = canvas.height / 2;
@@ -50,5 +48,4 @@ img2.appendChild(img1)
     } else if (fillMode == "outline"){
         ctx.stroke();
     }
-    //return canvas
 }
